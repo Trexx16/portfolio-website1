@@ -1,0 +1,431 @@
+<!--
+  index.html — Mcdaniel Ologun personal portfolio
+  Single-page portfolio. Open directly in a browser; no build step.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Mcdaniel Ologun, Senior AI Developer with 10 years of experience building LLM applications, AI agents, RAG systems, and MLOps pipelines.">
+  <title>Mcdaniel Ologun — Senior AI Developer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="#home" class="logo">Mcdaniel<span class="logo-accent">.</span></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section hero-section" aria-labelledby="home-heading">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Hello, I'm</p>
+          <h1 id="home-heading">Mcdaniel Ologun</h1>
+          <p class="hero-title">Senior AI Developer</p>
+          <p class="hero-tagline">I build intelligent systems that turn data into decisions — from LLM applications and autonomous agents to production MLOps.</p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="code-card" aria-label="Decorative code sample of a simple AI agent">
+            <div class="code-card-inner">
+              <div class="code-titlebar">
+                <span class="code-dots" aria-hidden="true">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </span>
+                <span class="code-tab">agent.py</span>
+              </div>
+              <pre class="code-block"><code><span class="code-keyword">def</span> <span class="code-function">run_agent</span>(query):
+    <span class="code-comment"># Simple AI agent loop</span>
+    <span class="code-keyword">for</span> step <span class="code-keyword">in</span> range(<span class="code-number">3</span>):
+        response = llm(<span class="code-string">"Answer: "</span> + query)
+        <span class="code-keyword">if</span> <span class="code-string">"done"</span> <span class="code-keyword">in</span> response:
+            <span class="code-keyword">return</span> response
+    <span class="code-keyword">return</span> <span class="code-string">"Fallback"</span><span class="code-cursor" aria-hidden="true"></span></code></pre>
+            </div>
+          </div>
+          <span class="hero-badge" aria-hidden="true">LLMs</span>
+          <span class="hero-badge" aria-hidden="true">AI Agents</span>
+          <span class="hero-badge" aria-hidden="true">RAG</span>
+          <span class="hero-badge" aria-hidden="true">MLOps</span>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About Me</h2>
+        <p>I'm Mcdaniel Ologun, a Senior AI Developer with a decade of experience turning cutting-edge machine learning research into production-grade software. I design and ship LLM applications, autonomous AI agents, and retrieval-augmented generation systems that solve real business problems.</p>
+        <p>My work spans the full lifecycle — from model prototyping and evaluation to scalable deployment on cloud infrastructure — and I care deeply about clean architecture, reliable data pipelines, and measurable impact.</p>
+
+        <figure class="profile-figure">
+          <img src="assets/photo.jpg" alt="Portrait of Mcdaniel Ologun, Senior AI Developer" width="280" height="280" loading="lazy">
+          <figcaption>Mcdaniel Ologun — Senior AI Developer</figcaption>
+        </figure>
+
+        <h3>Key Strengths</h3>
+        <ul class="strengths-list">
+          <li>Designing and shipping production LLM applications and RAG pipelines.</li>
+          <li>Building autonomous AI agents with tool use, planning, and evaluation.</li>
+          <li>Automating business workflows with robust, observable systems.</li>
+          <li>MLOps: model serving, monitoring, CI/CD, and scalable cloud deployments.</li>
+          <li>Translating research into reliable, user-facing products.</li>
+        </ul>
+
+        <aside class="learning-box" aria-labelledby="learning-heading">
+          <h3 id="learning-heading">Currently Learning</h3>
+          <ul>
+            <li>Multimodal LLMs and vision-language agents.</li>
+            <li>Advanced RAG evaluation and retrieval optimization.</li>
+            <li>Edge deployment of small language models.</li>
+          </ul>
+        </aside>
+
+        <!-- Drop your media files in the assets/ folder: intro.mp4, intro.mp3, poster.png -->
+        <h3>Intro Video &amp; Audio</h3>
+        <video controls poster="assets/poster.png" preload="metadata">
+          <source src="assets/intro.mp4" type="video/mp4">
+          Your browser does not support the video element. You can <a href="assets/intro.mp4">download the video</a> instead.
+        </video>
+        <p class="media-caption"><small>Screen recording demo of an AI automation project.</small></p>
+        <audio controls preload="metadata">
+          <source src="assets/intro.mp3" type="audio/mpeg">
+          Your browser does not support the audio element. You can <a href="assets/intro.mp3">download the audio</a> instead.
+        </audio>
+        <p class="media-caption"><small>Voice introduction recorded by me.</small></p>
+      </div>
+    </section>
+    <!-- ===================== WORK ===================== -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <h2 id="work-heading">Work</h2>
+        <p class="section-intro">A selection of recent AI projects spanning LLMs, agents, computer vision, and automation.</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>RAG Knowledge Assistant</h3>
+            <figure>
+              <img src="assets/project-rag.jpg" alt="Screenshot of a retrieval-augmented generation chatbot answering questions from enterprise documents" loading="lazy" width="400" height="240">
+              <figcaption>RAG chatbot for enterprise knowledge bases</figcaption>
+            </figure>
+            <p>A retrieval-augmented generation assistant that answers employee questions from internal docs with cited sources and hallucination guards.</p>
+            <ul class="tech-list">
+              <li>Python</li><li>LangChain</li><li>FastAPI</li><li>Pinecone</li><li>AWS</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Document Processing Agent</h3>
+            <figure>
+              <img src="assets/project-docagent.jpg" alt="Screenshot of an AI agent extracting structured data from invoices and contracts" loading="lazy" width="400" height="240">
+              <figcaption>Autonomous document extraction agent</figcaption>
+            </figure>
+            <p>An autonomous agent that extracts, validates, and routes structured data from invoices and contracts with human-in-the-loop review.</p>
+            <ul class="tech-list">
+              <li>Python</li><li>LangChain</li><li>OpenAI</li><li>Docker</li><li>PostgreSQL</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Computer Vision Pipeline</h3>
+            <figure>
+              <img src="assets/project-cv.jpg" alt="Screenshot of a computer vision pipeline detecting defects on a manufacturing line" loading="lazy" width="400" height="240">
+              <figcaption>Defect detection on the factory floor</figcaption>
+            </figure>
+            <p>A real-time computer vision pipeline for defect detection on manufacturing lines, with alerting and dashboards.</p>
+            <ul class="tech-list">
+              <li>PyTorch</li><li>OpenCV</li><li>FastAPI</li><li>AWS</li><li>Docker</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Workflow Automation Engine</h3>
+            <figure>
+              <img src="assets/project-automation.jpg" alt="Screenshot of a workflow automation builder with connected nodes" loading="lazy" width="400" height="240">
+              <figcaption>Visual workflow automation builder</figcaption>
+            </figure>
+            <p>A low-code automation engine that connects LLM steps, APIs, and business tools to automate repetitive operations.</p>
+            <ul class="tech-list">
+              <li>Python</li><li>FastAPI</li><li>Redis</li><li>Docker</li><li>AWS</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>LLM Evaluation Harness</h3>
+            <figure>
+              <img src="assets/project-eval.jpg" alt="Screenshot of an LLM evaluation dashboard with metrics and traces" loading="lazy" width="400" height="240">
+              <figcaption>LLM evaluation and tracing dashboard</figcaption>
+            </figure>
+            <p>An evaluation harness and tracing dashboard for measuring LLM quality, latency, and cost across prompt versions.</p>
+            <ul class="tech-list">
+              <li>Python</li><li>LangChain</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>MLOps Model Serving Platform</h3>
+            <figure>
+              <img src="assets/project-mlops.jpg" alt="Screenshot of an MLOps platform showing deployed models and metrics" loading="lazy" width="400" height="240">
+              <figcaption>Model serving and monitoring platform</figcaption>
+            </figure>
+            <p>A platform for deploying, versioning, and monitoring ML models with CI/CD, canary rollouts, and drift detection.</p>
+            <ul class="tech-list">
+              <li>Python</li><li>PyTorch</li><li>AWS</li><li>Docker</li><li>Kubernetes</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ===================== RESUME ===================== -->
+    <section id="resume" class="section" aria-labelledby="resume-heading">
+      <div class="container">
+        <h2 id="resume-heading">Resume</h2>
+        <nav class="resume-nav" aria-label="Resume sections">
+          <ul>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </nav>
+
+        <section id="experience" aria-labelledby="experience-heading">
+          <h3 id="experience-heading">Experience</h3>
+          <table class="resume-table">
+            <caption>Professional experience</caption>
+            <thead>
+              <tr>
+                <th scope="col">Role</th>
+                <th scope="col">Company</th>
+                <th scope="col">Period</th>
+                <th scope="col">Highlights</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Engineering Intern (SIWES)</th>
+                <td>SITOG Global Links Limited</td>
+                <td>14 Sep 2026 – 30 Oct 2026</td>
+                <td>Worked with sales engineers on industrial site visits: troubleshooting, fault detection and calibration of VEGA level and pressure instruments, configuring instruments with PACTware, and supporting technical proposals. Building a tracker for the Internal Sales department's emails (RFQs, POs, quotes) with automated classification and prioritisation.</td>
+              </tr>
+              <tr>
+                <th scope="row">Freelance AI Automation Engineer</th>
+                <td>Self-employed</td>
+                <td>Jan 2026 – May 2026</td>
+                <td>Built a customer service chatbot (Shopbot), an AI email classification agent, an AI lead qualification pipeline, and a CRM with a qualifier bot for GrowthPath Digital Consulting that books meetings for qualified leads and sends follow-up emails to under-qualified ones. Tools: n8n, Zapier, Make.com, Voiceflow, Airtable, Gemini, OpenAI.</td>
+              </tr>
+              <tr>
+                <th scope="row">Freelance CAD Designer</th>
+                <td>Self-employed</td>
+                <td>Jul 2025 – May 2026</td>
+                <td>Produced Fusion 360 models including TWS earbuds, a DC motor, a mobile phone and wind turbines (VAWT and HAWT), plus a portfolio of 12 engineering drawings. Member of the university forklift design team.</td>
+              </tr>
+              <tr>
+                <th scope="row">Assistant Head of Operations &amp; Quasi Head of Design Engineering</th>
+                <td>SEES Innovation Hub, UNILAG</td>
+                <td>[start date] – Present</td>
+                <td>Coordinate operations and design engineering deliverables, and co-lead the LoRa Campus Messaging Network and Campus Air Quality Monitor Network projects.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="education" aria-labelledby="education-heading">
+          <h3 id="education-heading">Education &amp; Certifications</h3>
+          <ol class="edu-list">
+              <li><strong>B.Sc. Electrical and Electronics Engineering</strong> — University of Lagos (UNILAG), expected 2028/2029</li>
+              <li><strong>TS Academy: AI Automation (n8n and Make.com)</strong></li>
+            </ol>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+          <h3 id="skills-heading">Skills</h3>
+          <div class="skills-groups">
+            <div class="skill-group">
+              <h4>AI / ML</h4>
+              <ul>
+                <li>Prompt engineering</li>
+                <li>LLM integration (OpenAI GPT-4o-mini, Google Gemini)</li>
+                <li>AI agents</li>
+                <li>AI lead scoring and qualification</li>
+                <li>Voiceflow chatbots</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Backend</h4>
+              <ul>
+                <li>Python (NumPy, SciPy, Matplotlib)</li>
+                <li>Workflow automation (n8n, Make.com, Zapier)</li>
+                <li>Webhooks and API integrations</li>
+                <li>Airtable and Google Sheets as data stores</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Cloud / DevOps</h4>
+              <ul>
+                <li>Git and GitHub</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Tools</h4>
+              <ul>
+                <li>Fusion 360</li>
+                <li>GoHighLevel</li>
+                <li>n8n</li>
+                <li>Zapier</li>
+                <li>Make.com</li>
+                <li>Voiceflow</li>
+                <li>Airtable</li>
+                <li>Slack</li>
+                <li>Google Workspace</li>
+                <li>PACTware</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <p class="resume-download">
+          <a href="assets/cv.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
+        </p>
+      </div>
+    </section>
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">Contact</h2>
+        <p class="section-intro">Have a project in mind or want to collaborate? Send me a message.</p>
+        <div class="contact-layout">
+          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
+            <fieldset>
+              <legend>Send me a message</legend>
+
+              <div class="form-row">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="name" required minlength="2" placeholder="Your full name" autocomplete="name">
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+              </div>
+
+              <div class="form-row">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" pattern="^[+0-9\s()-]{7,}$" autocomplete="tel">
+              </div>
+
+              <div class="form-row">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="project">Project inquiry</option>
+                  <option value="collaboration">Collaboration</option>
+                  <option value="job">Job opportunity</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <fieldset class="radio-group">
+                <legend>Preferred contact method</legend>
+                <label for="cm-email"><input type="radio" id="cm-email" name="contact-method" value="email" required> Email</label>
+                <label for="cm-phone"><input type="radio" id="cm-phone" name="contact-method" value="phone"> Phone</label>
+                <label for="cm-linkedin"><input type="radio" id="cm-linkedin" name="contact-method" value="linkedin"> LinkedIn</label>
+              </fieldset>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required minlength="10" rows="5" placeholder="Tell me about your project..."></textarea>
+              </div>
+
+              <div class="form-row checkbox-row">
+                <label for="updates"><input type="checkbox" id="updates" name="updates" value="yes"> Send me occasional updates</label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+              </div>
+            </fieldset>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <aside class="contact-info" aria-labelledby="contact-info-heading">
+            <h3 id="contact-info-heading">Other ways to reach me</h3>
+            <ul class="contact-links">
+              <li><a href="mailto:mcdanielologun@gmail.com">mcdanielologun@gmail.com</a></li>
+              <li><a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer">GitHub — Trexx16</a></li>
+              <li><a href="https://www.linkedin.com/in/mcdaniel-ologun-751938371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn — Mcdaniel Ologun</a></li>
+            </ul>
+            <p class="mailto-fallback">Form not working? <a href="mailto:mcdanielologun@gmail.com?subject=Portfolio%20Inquiry">Email me directly</a>.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="mailto:mcdanielologun@gmail.com" aria-label="Email Mcdaniel Ologun">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 4h20v16H2V4zm2 2v.5l8 5 8-5V6H4zm16 12V8.8l-8 5-8-5V18h16z"/></svg>
+      </a>
+      <a href="https://github.com/Trexx16" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 4.9 18.3 4.9c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/mcdaniel-ologun-751938371?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 2.5 6a2.5 2.5 0 0 1 2.48-2.5zM2.5 8.5h4.96V21.5H2.5V8.5zM9.5 8.5h4.76v1.78h.07c.66-1.25 2.28-2.57 4.7-2.57 5.02 0 5.95 3.3 5.95 7.59v6.2H20v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9v5.6h-4.96V8.5z"/></svg>
+      </a>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> Mcdaniel Ologun. All rights reserved.</p>
+    <p><a href="#home">Back to top</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
